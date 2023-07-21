@@ -19,9 +19,7 @@ const user = db.sequelize.define('ncmh_users',{
 		type: DataTypes.STRING
 	}
 },{
-	createdAt: true,
-	updatedAt: true,
-	deletedAt: true,
+
 	tableName: 'ncmh_users'
 })
 

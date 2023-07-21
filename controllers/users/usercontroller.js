@@ -1,6 +1,8 @@
 const usersModel = require("../../models/userModel.js").model;
 exports.getUser = async (req, res) => {
-	const users = await usersModel.findAll();
+	const users = await usersModel.findAll({
+		attributes: ['email', 'password'],
+	});
 	res.send(users)
 }
 
