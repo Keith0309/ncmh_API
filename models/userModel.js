@@ -7,19 +7,29 @@ const user = db.sequelize.define('ncmh_users',{
 		autoIncrement: true
 	},
 	email:{
-		type: DataTypes.STRING
+		type: DataTypes.STRING,
+		allowNull: false,
 	},
     firstName:{
-		type: DataTypes.STRING
+		type: DataTypes.STRING,
+		allowNull: false,
 	},
     lastName:{
-		type: DataTypes.STRING
+		type: DataTypes.STRING,
+		allowNull: false,
 	},
     password:{
-		type: DataTypes.STRING
+		type: DataTypes.STRING,
+		allowNull: false,
+	},
+	phoneNumber:{
+		type: DataTypes.INTEGER,
+		allowNull: false,
 	}
 },{
-
+	createdAt: true,
+	updatedAt: true,
+	deletedAt: true,
 	tableName: 'ncmh_users'
 })
 

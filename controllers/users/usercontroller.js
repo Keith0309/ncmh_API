@@ -11,7 +11,8 @@ exports.postUser = async (req, res) => {
 		email: req.body.email,
 		firstName: req.body.firstName,
 		lastName: req.body.lastName,
-		password: req.body.password
+		password: req.body.password,
+		phoneNumber: req.body.phoneNumber
 	})
 	res.send(addedUser); 
 }
