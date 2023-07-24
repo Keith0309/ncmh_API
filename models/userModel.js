@@ -25,6 +25,10 @@ const user = db.sequelize.define('ncmh_users',{
 	phoneNumber:{
 		type: DataTypes.INTEGER,
 		allowNull: false,
+	},
+	address:{
+		type: DataTypes.INTEGER,
+		allowNull: false,
 	}
 },{
 	createdAt: true,

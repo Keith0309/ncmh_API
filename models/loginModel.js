@@ -13,6 +13,14 @@ const login = db.sequelize.define('ncmh_users',{
     password:{
 		type: DataTypes.STRING,
 		allowNull: false,
+	},
+	lastName:{
+		type: DataTypes.STRING,
+		allowNull: false,
+	},
+	phoneNumber:{
+		type: DataTypes.STRING,
+		allowNull: false,
 	}
 },{
 	tableName: 'ncmh_users'

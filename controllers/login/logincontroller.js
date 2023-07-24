@@ -8,11 +8,19 @@ exports.postlogin = async (req, res) => {
         email: email,
         password: password,
       },
-      attributes: ["firstName"],
+      attributes: ['email', 'firstName', 'lastName', 'phoneNumber'],
     });
 
     if (userP) {
-      return res.status(200).json({ success: true, firstName: userP.firstName });
+      return res
+        .status(200)
+        .json({
+          success: true,
+          firstName: userP.firstName,
+          lastName: userP.lastName,
+          email: userP.email,
+          phoneNumber: userP.phoneNumber,
+        });
     } else {
       return res.json({ success: false });
     }
