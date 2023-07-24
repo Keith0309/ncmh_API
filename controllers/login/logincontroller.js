@@ -8,7 +8,7 @@ exports.postlogin = async (req, res) => {
         email: email,
         password: password,
       },
-      attributes: ['email', 'firstName', 'lastName', 'phoneNumber'],
+      attributes: ['email', 'firstName', 'lastName', 'phoneNumber', 'address'],
     });
 
     if (userP) {
@@ -20,6 +20,7 @@ exports.postlogin = async (req, res) => {
           lastName: userP.lastName,
           email: userP.email,
           phoneNumber: userP.phoneNumber,
+          address: userP.address,
         });
     } else {
       return res.json({ success: false });
