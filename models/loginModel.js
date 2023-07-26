@@ -28,6 +28,15 @@ const login = db.sequelize.define('ncmh_users',{
 	}
 },{
 	tableName: 'ncmh_users'
-})
+});
+
+(async () => {
+	try {
+	  await login.sync();
+	  console.log("login model synced successfully!");
+	} catch (error) {
+	  console.error("Error syncing login model:", error);
+	}
+  })();
 
 exports.model = login;

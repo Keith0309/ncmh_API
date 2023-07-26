@@ -35,6 +35,16 @@ const user = db.sequelize.define('ncmh_users',{
 	updatedAt: true,
 	deletedAt: true,
 	tableName: 'ncmh_users'
-})
+});
+
+(async () => {
+	try {
+	  await user.sync();
+	  console.log("user model synced successfully!");
+	} catch (error) {
+	  console.error("Error syncing user model:", error);
+	}
+  })();
+
 
 exports.model = user;
